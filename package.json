@@ -29,13 +29,13 @@
   },
   "homepage": "https://github.com/entr/html-beautify-webpack-plugin#readme",
   "dependencies": {
+    "core-js": "^3.6.4",
     "lodash": "^4.17.15"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.0",
-    "core-js": "^3.3.4"
+    "@babel/preset-env": "^7.9.0"
   },
   "peerDependencies": {
     "html-webpack-plugin": "^4.0.0",
