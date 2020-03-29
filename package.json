@@ -1,14 +1,16 @@
 {
-  "name": "html-beautify-webpack-plugin",
+  "name": "@entr/html-beautify-webpack-plugin",
   "version": "1.1.0",
   "description": "Adapter for beautifyjs as webpack plugin, chained with HtmlWebpackPlugin",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepare": "npm run build",
+    "build": "babel index.js --out-dir dist",
+    "watch": "babel --watch index.js --out-dir dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SeeYouLater/html-beautify-webpack-plugin.git"
+    "url": "git+https://github.com/entr/html-beautify-webpack-plugin.git"
   },
   "keywords": [
     "webpack",
@@ -17,16 +19,26 @@
     "plugin",
     "HtmlWebpackPlugin"
   ],
-  "author": "Dmitry Zhdanov <dmitryzhdanov94@gmail.com>",
+  "author": "Zlatko Zlatev <zlatko.zlatev@gmail.com>",
+  "contributors": [
+    "Dmitry Zhdanov <dmitryzhdanov94@gmail.com>"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SeeYouLater/html-beautify-webpack-plugin/issues"
+    "url": "https://github.com/entr/html-beautify-webpack-plugin/issues"
   },
-  "homepage": "https://github.com/SeeYouLater/html-beautify-webpack-plugin#readme",
+  "homepage": "https://github.com/entr/html-beautify-webpack-plugin#readme",
   "dependencies": {
-    "assert": "^2.0.0",
-    "chalk": "^2.4.2",
-    "js-beautify": "^1.10.2",
     "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "core-js": "^3.3.4"
+  },
+  "peerDependencies": {
+    "html-webpack-plugin": "^4.0.0",
+    "js-beautify": "^1.2.0"
   }
 }
